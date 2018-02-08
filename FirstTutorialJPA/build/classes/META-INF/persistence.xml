@@ -8,9 +8,9 @@
 	  <properties>
 	  <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
          <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521/XE"/>    
-         <property name="javax.persistence.jdbc.user" value="project"/>
-         <property name="javax.persistence.jdbc.password" value="fifa18"/>
-         <property name="eclipselink.logging.level" value="FINE"/>
+         <property name="javax.persistence.jdbc.user" value="dbusername"/>
+         <property name="javax.persistence.jdbc.password" value="<>"/>
+         <property name="eclipselink.logging.level" value="FINE"/>//This is for logging all the events when JPA connects, it shows the SQL as well
  
       </properties>
 	
