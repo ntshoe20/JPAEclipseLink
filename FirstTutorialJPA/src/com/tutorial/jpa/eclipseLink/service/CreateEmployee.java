@@ -9,7 +9,7 @@ public class CreateEmployee {
 	
 	public static void main(String...args){
 		
-		EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "FirstTutorialJPA" );
+		EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "FirstTutorialJPA" );//same as in the persistence.xml
 		EntityManager entitymanager = emfactory.createEntityManager( );
 		Employee employee = new Employee( );
 	      
@@ -19,25 +19,20 @@ public class CreateEmployee {
 		      
 		      //Employee values
 		      employee.setemployee_id(1202);
-		      employee.setEname("Itumeleng");
+		      employee.setEname("James");
 		      employee.setSalary(45000);
 		      employee.setDeg("Developer");
 		      
 		      entitymanager.persist(employee);//save the details to the DB, no commit yet.
 		      entitymanager.getTransaction().commit();//commit transaction then check the DB
-		      
-		      entitymanager.close( );
-		      emfactory.close( );
+
 			
 		}catch(Exception e){
 			e.printStackTrace();
+		}finally{
+			entitymanager.close( );
+		      emfactory.close( );
 		}
-	     
-
-	      /* 
-	      
-	      */     
-		
 		
 	}
 
